@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='web-102-homework-summer-2025/Animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./project1/community_board/src/Animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif  
