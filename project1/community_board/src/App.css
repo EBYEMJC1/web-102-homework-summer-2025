@@ -1,0 +1,34 @@
+
+/* for the card container flexbox row */
+.card-container {
+  display: flex; /*make children line up in a row*/
+  flex-wrap: wrap; /*  If the cards can’t all fit, start a new row below.*/
+  justify-content: center; /* Keep cards centered on the page */
+  gap: 20px; /* 20 px space between each card */
+  padding: 20px; /*  Space around all cards, so they’re not at the edge. */
+
+}
+
+/* for each individual card */
+.card {
+  background-color: aliceblue; /* background color of each card */
+  border-radius: 12px; /* rounded corners*/
+  box-shadow: 0 2px 8px #0002; /*soft shadow for each card Makes the card float off the background.*/
+  width: 320px; /*make all cards the same width 320 px*/
+  padding: 16px; /* space inside the card 16 px*/
+  display: flex; /* Stack the title and description on top of each other. content inside of the card is a flexbox so the title and description*/
+  flex-direction: column; /* stack the contents of the card title and description in column format so stacked ontop of each other instead of next to each other*/
+  align-items: flex-start; /* start content from the left not right */
+  transition: transform 0.1s; /* animation on hover When the transform property changes (like on hover), smoothly animate the change over 0.1 seconds (100 milliseconds) instead of jumping instantly.*/
+}
+
+/* the hover state of cards class so when mouse is on top what happens */
+.card:hover {
+  transform: translateY(-6px) scale(1.03); /* lift up and grow a little, which looks like it’s “popping out” of the screen at you scale(1.03) means "make the card 3% bigger than its normal size" in both width and height. translateY(-6px) means "move the card up by 6 pixels."*/ 
+  /* f your card was normally 320px wide and 180px tall:
+
+On hover, scale(1.03) would make it about 329.6px wide and 185.4px tall.*/
+  box-shadow: 0 6px 20px #003; /* The shadow gets darker and larger, making the card look even more “popped out.”*/
+}
+
+/* card title style since card titles are in h2 tags*/
