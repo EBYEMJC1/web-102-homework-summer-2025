@@ -72,9 +72,11 @@ function App() {
     <div className="App"> 
     
       <div className="overall-title"> 
+        <h3> Assembly Flashcards </h3>
       </div>
 
       <div className="overall-description">
+        <p>we have {cards.length} cards on assembly, happy learning.</p>
       </div>
 
       <div className="flashcard-area" onClick={flipping_card}>
