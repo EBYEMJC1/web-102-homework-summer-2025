@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Web Development Project 3 - *Name of App Here*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Submitted by: Sara Sadek
 
-## Available Scripts
+This web app: allows you to go to next and prev cards and input answers check if match
 
-In the project directory, you can run:
+Time spent: 2.3 hours spent in total
 
-### `npm start`
+## Required Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The following **required** functionality is completed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [x] **The user can enter their guess into an input box *before* seeing the flipside of the card**
+  - Application features a clearly labeled input box with a submit button where users can type in a guess
+  - Clicking on the submit button with an **incorrect** answer shows visual feedback that it is wrong 
+  -  Clicking on the submit button with a **correct** answer shows visual feedback that it is correct
+- [x] **The user can navigate through an ordered list of cardss**
+  - A forward/next button displayed on the card navigates to the next card in a set sequence when clicked
+  - A previous/back button displayed on the card returns to the previous card in the set sequence when clicked
+  - Both the next and back buttons should have some visual indication that the user is at the beginning or end of the list (for example, graying out and no longer being available to click), not allowing for wrap-around navigation
 
-### `npm test`
+The following **optional** features are implemented:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- [ ] Users can use a shuffle button to randomize the order of the cards
+  - Cards should remain in the same sequence (**NOT** randomized) unless the shuffle button is clicked 
+  - Cards should change to a random sequence once the shuffle button is clicked
+- [ ] A user’s answer may be counted as correct even when it is slightly different from the target answer
+  - Answers are considered correct even if they only partially match the answer on the card 
+  - Examples: ignoring uppercase/lowercase discrepancies, ignoring punctuation discrepancies, matching only for a particular part of the answer rather than the whole answer
+- [ ] A counter displays the user’s current and longest streak of correct responses
+  - The current counter increments when a user guesses an answer correctly
+  - The current counter resets to 0 when a user guesses an answer incorrectly
+  - A separate counter tracks the longest streak, updating if the value of the current streak counter exceeds the value of the longest streak counter 
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of displayed cards
+  - The user can mark a card to indicate that it has been mastered
+  - Mastered cards are removed from the pool of displayed cards and added to a list of mastered cards
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The following **additional** features are implemented:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [ ] List anything else that you added to improve the site's functionality!
 
-### `npm run eject`
+## Video Walkthrough
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Here's a walkthrough of implemented user stories:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src='web-102-homework-summer-2025/project3/flashcard-app/Animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  
+<!-- Recommended tools:
+[ScreenToGif](https://www.screentogif.com/) for Windows
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Notes
 
-## Learn More
+Describe any challenges encountered while building the app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Copyright [2025] [sara Sadek]
 
-### Code Splitting
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+        http://www.apache.org/licenses/LICENSE-2.0
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
