@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from "react";
 import Flashcard from './components/flashcard.js'
+import AnswerForm from './components/answer_form.jsx'
+
 import './App.css';
 
 
@@ -53,16 +55,24 @@ function App() {
     setFront(!front);
   }
 
-  function pick_current_index(){
-    let newIndex = Math.floor(Math.random() * cards.length);
-    if (cards.length > 1){
-      while (newIndex === currentIndex){
-        newIndex = Math.floor(Math.random() * cards.length);
-      }
+  function next_button(){
+    if (currentIndex < cards.length-1){
+      let newIndex = currentIndex + 1;
+      //make the current index equal to your new index
+      // html will render automatically when index is changed since state changes update automatically render
+      setCurrentIndex(newIndex);
     }
-    //make the current index equal to your new index
-    // html will render automatically when index is changed since state changes update automatically render
-    setCurrentIndex(newIndex)
+    //make it so that whenever new carepicked it starts at the front of card
+    setFront(true)
+  }
+
+  function prev_button(){
+    if (currentIndex > 0){
+      let newIndex = currentIndex - 1;
+      //make the current index equal to your new index
+      // html will render automatically when index is changed since state changes update automatically render
+      setCurrentIndex(newIndex);
+    }
     //make it so that whenever new carepicked it starts at the front of card
     setFront(true)
   }
@@ -83,27 +93,16 @@ function App() {
         <Flashcard question={cards[currentIndex].question} answer={cards[currentIndex].answer} front={front} />
       </div>
 
+      <div className='Answer'>
+        <AnswerForm answer={cards[currentIndex].answer}/>
+      </div>
+
       <div className="forward-and-back-buttons">
-        <button className="next-button" onClick={pick_current_index}> Next </button>
+        <button className="next-button" onClick={next_button} disabled={currentIndex === cards.length - 1}> Next </button>
+        <button className="prev-button" onClick={prev_button} disabled={currentIndex === 0}> Previous </button>
       </div>
 
     </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 
